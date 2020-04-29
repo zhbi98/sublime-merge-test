@@ -8,13 +8,11 @@ import matplotlib.pyplot as plt
 
 def loadImage(path):
     image = Image.open(path)
-    # image.show()
     return image
 
 
 def imageToMatrix(image):
     matrix = np.asarray(image)
-    # print(matrix)
     return matrix
 
 
