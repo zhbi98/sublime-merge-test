@@ -1,6 +1,5 @@
 
 from PIL import Image
-from PIL import ImageTk
 
 import math
 import numpy as np
