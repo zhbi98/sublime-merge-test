@@ -18,13 +18,11 @@ import matplotlib.pyplot as plt
 
 def loadImage(path):
     image = Image.open(path)
-    # image.show()
     return image
 
 
 def imageToMatrix(image):
     matrix = np.asarray(image)
-    # print(matrix)
     return matrix
 
 
@@ -73,7 +71,6 @@ class ImageAlpha(object):
 
         for i in range(height):
             for j in range(width):
-                # for k in range(channel):
                 new[i, j] = self.rgbMixing(imagematrix[i][j][0], imagematrix[i][j][1], imagematrix[i][j][2])
 
         new = new / 255
