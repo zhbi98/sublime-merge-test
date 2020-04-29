@@ -7,14 +7,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-Image load
-image = Image.open('./Sierra22.jpg')
-image.show()
-print(image)
+# Image load
+# image = Image.open('./Sierra22.jpg')
+# image.show()
+# print(image)
 
-matplot load
-image = plt.imread('./Sierra22.jpg')
-plt.imshow(image)
+# matplot load
+# image = plt.imread('./Sierra22.jpg')
+# plt.imshow(image)
 
 
 def loadImage(path):
