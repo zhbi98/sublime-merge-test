@@ -16,7 +16,6 @@ import matplotlib.pyplot as plt
 # plt.imshow(image)
 
 
-
 def loadImage(path):
     image = Image.open(path)
     return image
