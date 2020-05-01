@@ -73,6 +73,41 @@ def imageMirror(image, direction=mirrorlevel):
     return matrixToImages(new)
 
 
+class ImageMirror(object):
+    def __init__(self, direction=mirrorlevel):
+        self.direction = direction
+
+    def levelMirror(self, y, x, width):
+        y_ = y
+        x_ = width - x - 1
+
+        return y_, x_
+
+    def verticalMirror(self, y, x, height):
+        y_ = height - y - 1
+        x_ = x
+        
+        return y_, x_
+
+    def imageMirror(self, image):
+        imagematrix = imageToMatrix(image)
+
+        height = imagematrix.shape[0]
+        width = imagematrix.shape[1]
+        channel = imagematrix.shape[2]
+        new = np.zeros((height, width, channel))
+
+        for i in range(height):
+            for j in range(width):
+                if self.direction == mirrorlevel:
+                    new[i, j] = imagematrix[self.levelMirror(i, j, width)]
+                else:
+                    new[i, j] = imagematrix[self.verticalMirror(i, j, height)]
+
+        new = new / 255
+        return matrixToImages(new)
+
+
 photos = loadImage('./Sierra23.jpg')
 
 image = imageMirror(photos, mirrorlevel)
