@@ -56,7 +56,7 @@ def imageLight(image, light):
     return dark
 
 
-image = loadImage('./Sierra16.jpg')
+image = loadImage('./Sierra13.jpg')
 
 image = imageLight(image, 9)
 image.show()
