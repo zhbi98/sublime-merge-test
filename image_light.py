@@ -44,7 +44,7 @@ def power(value, n):
     return result
 
 
-# light 0 - 10
+# light can Assignment range 0 - 10
 def imageLight(image, light):
     if light <= 8:
         light = 8
